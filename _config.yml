@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 locale                   : "ko_KR"
 title                    : "TIL"
 title_separator          : " | "
-subtitle                 : "Version 1.0" # site tagline that appears below site title in masthead
+subtitle                 : "일기장" # site tagline that appears below site title in masthead
 name                     : "SeungChul Lee"
 description              : "오늘의 배운 내용을 정리하는 Blog입니다"
 url                      : "https://seungchulee.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "SeungChul Lee"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/pictures/IMG_3440.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "꾸준함 <br> 블로그 포스트 글에서 잘못된 부분이나 수정했으면 하는 부분, 적극적으로 댓글 남겨주신다면 감사하겠습니다."
   location         : "Republic Of Korea"
   email            : "inthetelevision@gmail.com"
