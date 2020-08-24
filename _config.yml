@@ -242,6 +242,12 @@ whitelist:
 category_archive:
   type: liquid
   path: /categories/
+about:
+  type: liquid
+  path: /about/
+posts:
+  type: liquid
+  path: /posts/
 tag_archive:
   type: liquid
   path: /tags/
