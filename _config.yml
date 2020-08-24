@@ -246,8 +246,11 @@ about:
   type: liquid
   path: /about/
 posts:
-  type: liquid
+  type: posts
   path: /posts/
+  values:
+    layout: single
+    author_profile: true
 tag_archive:
   type: liquid
   path: /tags/
