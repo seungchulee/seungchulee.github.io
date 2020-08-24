@@ -1,1 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-24T11:32:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">TIL</title><subtitle>오늘의 배운 내용을 정리하는 Blog입니다</subtitle><author><name>SeungChul Lee</name><email>inthetelevision@gmail.com</email></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-24T19:49:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">TIL</title><subtitle>오늘의 배운 내용을 정리하는 Blog입니다</subtitle><author><name>SeungChul Lee</name><email>inthetelevision@gmail.com</email></author><entry><title type="html">첫 게시글</title><link href="http://localhost:4000/first-article/" rel="alternate" type="text/html" title="첫 게시글" /><published>2020-08-24T00:00:00+09:00</published><updated>2020-08-24T00:00:00+09:00</updated><id>http://localhost:4000/first-article</id><content type="html" xml:base="http://localhost:4000/first-article/">&lt;h5 id=&quot;시작하게-된-이유&quot;&gt;&lt;strong&gt;시작하게 된 이유&lt;/strong&gt;&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;코로나로 인해 재택을 하면서 상대적으로 통근하는 2시간-3시간이 줄어들었음&lt;/li&gt;
+  &lt;li&gt;이 시간을 좀 더 효율적으로 사용하고 싶어서 고민함 (다시 통근하면 어떠할지 고민해야할듯)&lt;/li&gt;
+  &lt;li&gt;어디서 TIL을 주워들어서 이를 해보기로 함&lt;/li&gt;
+  &lt;li&gt;주로 TIL, 공부한 개념, 지식 같은 것들을 기록할듯&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;어떤-것을-채워나갈지&quot;&gt;&lt;strong&gt;어떤 것을 채워나갈지&lt;/strong&gt;&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;평소에 Swift 해보고 싶어서 아마 swift를 공부할듯&lt;/li&gt;
+  &lt;li&gt;회사에서 Javascript도 접한 적이 있어서 JS 공부도 같이 할듯 (아마 JS를 얼추 하게 되면 React로 넘어가지 않을까)&lt;/li&gt;
+  &lt;li&gt;기타 회사에서 배운거나 새로 배우게 된 지식, 개념들로 채워나갈듯&lt;/li&gt;
+  &lt;li&gt;또 다른 공부하고 싶은 분야가 있으면 추가…&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;규칙&quot;&gt;&lt;strong&gt;규칙&lt;/strong&gt;&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;되도록이면 하루에 한번 공부하고 배운 내용을 작성&lt;/li&gt;
+  &lt;li&gt;꾸준함 (하루 한시간이던 두시간이던 공부하기)&lt;/li&gt;
+  &lt;li&gt;최대한 풀어서 자세하게 쓰기 (나만 보는게 아니니까)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;참고할 책들&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;객체지향, 함수형, 프로토콜 지향 패러다임까지 한 번에! 스위프트 프로그래밍 (작성자 : 야곰)&lt;/li&gt;
+  &lt;li&gt;모던 자바스크립트 입문 (작성자 : 이소 히로시)  -&amp;gt; 배송중&lt;/li&gt;
+  &lt;li&gt;자바스크립트는 왜 그 모양일까? (작성자 : 더글라스 크락포드) -&amp;gt; 배송중&lt;/li&gt;
+  &lt;li&gt;더 사야지&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;내용이 부실할 수도 있으니 가볍게 봐주시면 감사하겠습니다 🙇‍♂️&lt;/p&gt;</content><author><name>SeungChul Lee</name><email>inthetelevision@gmail.com</email></author><summary type="html">시작하게 된 이유 코로나로 인해 재택을 하면서 상대적으로 통근하는 2시간-3시간이 줄어들었음 이 시간을 좀 더 효율적으로 사용하고 싶어서 고민함 (다시 통근하면 어떠할지 고민해야할듯) 어디서 TIL을 주워들어서 이를 해보기로 함 주로 TIL, 공부한 개념, 지식 같은 것들을 기록할듯</summary></entry></feed>
