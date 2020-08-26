@@ -4,4 +4,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/first-article/",
         "teaser": null
+      },{
+        "title": "[Swift] 시작, Data Type",
+        "excerpt":"swift란? swift는 처음에 safe, modern, powerful을 모토로 가져왔다. 지금은 safe, fast, expressive를 방향성으로 잡고 가는 중이다. safe : 문법을 엄격하게 적용하여 개발자의 실수를 방지, 타입추론은 지원하긴 함. fast : 예전 애플 관련 프로그래밍을 하려고 하면 Objective-C를 배워야 했다. 지금은 Swift를 만들면서 Objective-C에 버금가는 성능을 내려고 하는 중이다. expressive : 그나마...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/swift-data-type/",
+        "teaser": null
       }]
