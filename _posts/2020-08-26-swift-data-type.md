@@ -148,18 +148,18 @@ print(myset.count)  // 4
 - **enum**을 사용해서 데이터를 선언한다.
 ```swift
 enum Month : String{
-	case jan = "1월"
-	case feb = "2월"
-	case mar = "3월"
-	case apr = "4월"
-	case may = "5월"
-	case jun = "6월"
+		case jan = "1월"
+		case feb = "2월"
+		case mar = "3월"
+		case apr = "4월"
+		case may = "5월"
+		case jun = "6월"
 }  // String의 데이터를 가짐
 print(Month.feb.rawValue)  // "2월"
 enum Married : Int{
-	case married  // 0이 자동으로 mapping 됨
-	case no_married // 1이 자동으로 mapping 됨
-	case not_show = -1
+		case married  // 0이 자동으로 mapping 됨
+		case no_married // 1이 자동으로 mapping 됨
+		case not_show = -1
 }  // Int의 데이터를 가짐
 print(Married(rawValue : 1))  // no_married
 ```
