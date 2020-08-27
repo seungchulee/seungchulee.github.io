@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-26T21:52:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">TIL</title><subtitle>오늘의 배운 내용을 정리하는 Blog입니다</subtitle><author><name>SeungChul Lee</name><email>inthetelevision@gmail.com</email></author><entry><title type="html">[Swift] 시작, Data Type</title><link href="http://localhost:4000/swift-data-type/" rel="alternate" type="text/html" title="[Swift] 시작, Data Type" /><published>2020-08-26T00:00:00+09:00</published><updated>2020-08-26T00:00:00+09:00</updated><id>http://localhost:4000/swift-data-type</id><content type="html" xml:base="http://localhost:4000/swift-data-type/">&lt;h2 id=&quot;swift란&quot;&gt;swift란?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-27T16:21:07+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">TIL</title><subtitle>오늘의 배운 내용을 정리하는 Blog입니다</subtitle><author><name>SeungChul Lee</name><email>inthetelevision@gmail.com</email></author><entry><title type="html">[Swift] 시작, Data Type</title><link href="http://localhost:4000/swift-data-type/" rel="alternate" type="text/html" title="[Swift] 시작, Data Type" /><published>2020-08-26T00:00:00+09:00</published><updated>2020-08-26T00:00:00+09:00</updated><id>http://localhost:4000/swift-data-type</id><content type="html" xml:base="http://localhost:4000/swift-data-type/">&lt;h2 id=&quot;swift란&quot;&gt;swift란?&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;swift는 처음에 safe, modern, powerful을 모토로 가져왔다.&lt;/li&gt;
   &lt;li&gt;지금은 safe, fast, expressive를 방향성으로 잡고 가는 중이다.
@@ -62,7 +62,7 @@
   &lt;li&gt;&lt;strong&gt;정수형&lt;/strong&gt;
     &lt;ul&gt;
       &lt;li&gt;swift에서는 Int와 UInt가 존재한다.&lt;/li&gt;
-      &lt;li&gt;Int는 양수, UInt는 음수까지 포함한 정수이다.&lt;/li&gt;
+      &lt;li&gt;Int는 음수/양수/0, UInt는 양수/0의 정수이다.&lt;/li&gt;
       &lt;li&gt;Int에는 Int8, Int16, Int32, Int64가 있는데 그냥 Int로 쓰면 자신의 컴퓨터의 사양에 따라서 알아서 정해지게 된다. (UInt도 마찬가지)&lt;/li&gt;
       &lt;li&gt;직접 확인해보고 싶으면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Int.max, Int.min&lt;/code&gt;으로 확인이 가능하다.(UInt도 마찬가지)&lt;/li&gt;
       &lt;li&gt;이 타입에는 십진수 뿐만 아니라 2진수, 8진수, 16진수도 가능하다.
