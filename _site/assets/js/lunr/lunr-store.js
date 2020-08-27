@@ -10,4 +10,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/swift-data-type/",
         "teaser": null
+      },{
+        "title": "[Swift] 연산자, 조건문, 반복문",
+        "excerpt":"연산자 swift에도 다양한 연산자가 존재한다. 많은 언어에서 사용하는 사칙연산을 하는 연산자와 비교하는 연산자 그리고 범위 연산자 등 다양한 연산자를 지원한다. 할당 연산자 단순히 말해서 값을 할당할 때 사용하는 연산자이다. =을 사용해서 값을 할당한다. swift는 safe한 언어로 데이터 타입이 다르면 오류가 발생한다. var a : Int = 10 // 여기서 =...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/swift/",
+        "teaser": null
       }]
