@@ -1,6 +1,10 @@
 ---
 title: "[Swift] 연산자, 조건문, 반복문"
+categories:
+- swift
 share: false
+toc: true
+toc_sticky: true
 ---
 
 ## 연산자

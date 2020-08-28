@@ -1,6 +1,10 @@
 ---
 title: "[Swift] 시작, Data Type"
+categories:
+- swift
 share: false
+toc: true
+toc_sticky: true
 ---
 
 ## swift란?

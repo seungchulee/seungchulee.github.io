@@ -1,5 +1,9 @@
 ---
 title: "[Swift] 함수, 옵셔널"
+categories: 
+  - swift
+toc: true
+toc_sticky: true
 share: false
 ---
 
