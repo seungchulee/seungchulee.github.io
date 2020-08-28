@@ -1,5 +1,7 @@
 ---
 title: 첫 게시글
+categories: 
+  - daily
 share: false
 ---
 
