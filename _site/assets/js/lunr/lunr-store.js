@@ -16,4 +16,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/swift/",
         "teaser": null
+      },{
+        "title": "[Swift] 함수, 옵셔널",
+        "excerpt":"함수 함수는 작은 프로그램의 단위이고 함수를 통해서 한번에 여러가지 일을 처리할 수도 있다. swift에서도 다른 언어와 마찬가지로 함수를 쓸 수 있다. swift에서 조건문이나 반복문에 소괄호는 생략이 가능하지만 함수에서는 이는 불가하다. 그리고 swift에서는 함수를 override, overload 둘 다 가능하며 함수를 매개변수로도 넘길 수 있다. 함수의 선언 func 함수 이름 (매개 변수...)...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/function-optional/",
+        "teaser": null
       }]
