@@ -1,0 +1,204 @@
+I"�><h2 id="연산자">연산자</h2>
+<p>swift에도 다양한 연산자가 존재한다.</p>
+
+<p>많은 언어에서 사용하는 사칙연산을 하는 연산자와 비교하는 연산자 그리고 범위 연산자 등 다양한 연산자를 지원한다.</p>
+
+<ul>
+  <li>할당 연산자
+    <ul>
+      <li>단순히 말해서 값을 할당할 때 사용하는 연산자이다.</li>
+      <li><code class="language-plaintext highlighter-rouge">=</code>을 사용해서 값을 할당한다.</li>
+      <li>swift는 safe한 언어로 데이터 타입이 다르면 오류가 발생한다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">a</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1">// 여기서 = 이 할당 연산자이다.</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>산술 연산자
+    <ul>
+      <li>흔히 말하는 사칙연산에 관한 연산자다.</li>
+      <li><code class="language-plaintext highlighter-rouge">+, -, *, /, %</code>가 있으며 많이 쓰이고 의미는 다 똑같다.</li>
+      <li>overflow를 방지하기 위해서 <code class="language-plaintext highlighter-rouge">&amp;+, &amp;-, &amp;*</code>도 쓸 수 있다.</li>
+      <li>string에서도 <code class="language-plaintext highlighter-rouge">+</code>를 쓸 수 있다.</li>
+    </ul>
+  </li>
+  <li>비교 연산자
+    <ul>
+      <li>두 값을 비교할 때 사용하는 연산자이다.</li>
+      <li><code class="language-plaintext highlighter-rouge">==, &gt;=, &lt;=, &lt;, &gt;, !=, ===, !==, ~=</code>가 쓰인다.</li>
+    </ul>
+  </li>
+  <li>삼항 조건 연산자
+    <ul>
+      <li>다른 언어에서도 볼 수 있는 삼항연산자와 같은 기능을 한다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">v1</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">var</span> <span class="nv">v2</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="k">var</span> <span class="nv">v3</span> <span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="n">v1</span> <span class="o">&gt;</span> <span class="n">v2</span> <span class="p">?</span> <span class="s">"Big"</span> <span class="p">:</span> <span class="s">"Small"</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">v3</span><span class="p">)</span>  <span class="c1">// "Small"</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>범위 연산자
+    <ul>
+      <li>이 연산자는 swift에서 나는 처음 봤다.</li>
+      <li>범위에 대한 연산자로 python에서 range와 비슷한 기능을 하는거 같다.</li>
+      <li><code class="language-plaintext highlighter-rouge">A...B</code>:  A &lt;= X &lt;= B</li>
+      <li><code class="language-plaintext highlighter-rouge">A..&lt;B</code>: A &lt;= X &lt; B</li>
+      <li><code class="language-plaintext highlighter-rouge">A&lt;..B</code>: A&lt;X&lt;=B</li>
+      <li><code class="language-plaintext highlighter-rouge">A...</code>: A&lt; X</li>
+      <li>등 <code class="language-plaintext highlighter-rouge">. &lt;</code>을 적절히 사용해서 범위를 나타낼 수 있다.</li>
+    </ul>
+  </li>
+  <li>Bool 연산자
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">!, &amp;&amp;, ||</code>을 통해 Not, And, Or을 표현할 수 있다.</li>
+    </ul>
+  </li>
+  <li>비트 연산자
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">~, &amp;, |, ^, &gt;&gt;, &lt;&lt;</code> 을 통해 Not, And, Or, Xor, Shift을 할 수 있다.</li>
+    </ul>
+  </li>
+  <li>복합 할당 연산자
+    <ul>
+      <li>할당연산자(=)과 다른 연산자를 합쳐서 수행할 수 있다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">+=</span> <span class="n">b</span>  <span class="c1">// a = a + b</span>
+<span class="n">a</span> <span class="o">/=</span> <span class="n">b</span>  <span class="c1">// a = a / b</span>
+<span class="o">...</span>
+<span class="c1">// 여러 표현을 쓸 수 있음</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>이 외에도 nil 병합 연산자, 부호 변경 연산자, 옵셔널 강제 추출 연산자, 옵셔널 연산자 등 다양한 연산자가 있다.<br />
+연산자 사이에서도 우선순위는 존재하고 또한 swift에서 사용자가 직접 연산자를 정의할 수도 있다.<br />
+복잡한 연산을 수행하는 연산자를 만들게 되면 이는 함수를 실행하는 것보다 훨씬 좋고 가독성에서도 좋을 수 있다.</p>
+</blockquote>
+
+<h2 id="조건문">조건문</h2>
+<p>swift에서의 조건문은 <code class="language-plaintext highlighter-rouge">if...else, switch, guard</code>가 있다.<br />
+다른 언어에서와 마찬가지로 같은 기능을 수행하고 특징은 if나 switch에서 소괄호는 안써도 상관없지만 중괄호는 반드시 써야한다는 차이점이 있다.</p>
+<ul>
+  <li>if…else 구문
+    <ul>
+      <li>if나 else if에서의 조건은 반드시 Bool 형태만 올 수 있다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">a</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">var</span> <span class="nv">b</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="p">{</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"Small"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"Same"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="p">{</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"Big"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>switch 구문
+    <ul>
+      <li>switch 역시 소괄호는 안써도 상관 없다.</li>
+      <li>switch 문에서 하나의 case를 수행하고 계속 진행하고 싶으면 <code class="language-plaintext highlighter-rouge">fallthrough</code> 키워드를 쓰면 된다.</li>
+      <li>case를 여러개 쓸 수 있고 break를 마지막에 안 적어줘도 되고 where을 통해 조건을 걸 수도 있다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">myName</span> <span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Stephen"</span>
+<span class="k">var</span> <span class="nv">cond</span> <span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="k">switch</span> <span class="n">myName</span> <span class="p">{</span>
+  <span class="k">case</span> <span class="s">"St"</span><span class="p">,</span> <span class="s">"Tr"</span><span class="p">:</span> <span class="c1">// case에 여러 개의 조건을 쓸 수 있다.</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"I'm not </span><span class="se">\(</span><span class="n">myName</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+  <span class="k">case</span> <span class="s">"Dump"</span><span class="p">:</span>
+      <span class="k">fallthrough</span> <span class="c1">// 이 부분은 수행 안하고 넘어간다.</span>
+  <span class="k">case</span> <span class="s">"You"</span> <span class="k">where</span> <span class="n">cond</span> <span class="o">==</span> <span class="nv">true</span><span class="p">:</span> <span class="c1">// where문을 사용해서 조건을 걸 수도 있다.</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"COND"</span><span class="p">)</span>
+  <span class="k">case</span> <span class="s">"Stephen"</span><span class="p">:</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"I'm Stephen"</span><span class="p">)</span>
+  <span class="k">default</span><span class="p">:</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"WoW"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+      <li>switch문으로 비교할 수 있는 거에는 Tuple이나 열거형 데이터도 올 수 있다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="반복문">반복문</h2>
+<ul>
+  <li>swift에서 반복문은 <code class="language-plaintext highlighter-rouge">for, while, repeat-while</code>문이 있다. (여기서 repeat-while은 다른 언어의 do-while과 같은 역할이다)</li>
+  <li>for문
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">for 변수 in 시퀀스 형식</code>으로 이루어져 있다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">5</span><span class="o">...</span><span class="mi">10</span><span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>  <span class="c1">// 5부터 10까지 출력</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+      <li>배열이나 set 같은 데이터 타입에도 for문을 적용시킬 수 있다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">myArray</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">,</span> <span class="s">"D"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">ch</span> <span class="k">in</span> <span class="n">myArray</span><span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>  <span class="c1">// 배열 원소들 출력</span>
+<span class="p">}</span>
+<span class="k">var</span> <span class="nv">myDic</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"A"</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"B"</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"C"</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">"D"</span> <span class="p">:</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1">// dictionary도 가능 </span>
+<span class="k">for</span> <span class="n">data</span> <span class="k">in</span> <span class="n">myDic</span><span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1">// ("A", 1), ("B", 2) ... 출력</span>
+<span class="p">}</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="k">in</span> <span class="n">myDic</span><span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">key</span><span class="se">)</span><span class="s"> : </span><span class="se">\(</span><span class="n">val</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>  <span class="c1">// "A : 1", "B : 2" ... 출력</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>while 문
+    <ul>
+      <li>while 도 다른 언어에서의 while과 다르지 않다.</li>
+      <li>while문에서 조건문은 반드시 Bool 타입이어야 한다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">summ</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">summ</span> <span class="o">&lt;=</span> <span class="mi">10</span> <span class="p">{</span> 
+  <span class="n">summ</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>repeat-while문
+    <ul>
+      <li>do-while과 다르지 않으며 조건 역시 Bool 타입이어야한다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">summ</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">repeat</span><span class="p">{</span>
+  <span class="n">summ</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="p">}</span><span class="k">while</span> <span class="n">summ</span> <span class="o">&lt;=</span> <span class="mi">10</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>반복문에서 여러개의 반복문이 중첩으로 있을 때 break나 continue를 할 때가 있다.
+이 때 반복문에 이름을 부여할 수 있고 원하는 반복문을 break, continue를 할 수가 있다.</p>
+</blockquote>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">count</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nv">loopOne</span> <span class="p">:</span> <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">...</span><span class="mi">10</span><span class="p">{</span>
+	<span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+	<span class="nv">loopTwo</span> <span class="p">:</span> <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">1</span><span class="o">...</span><span class="mi">10</span><span class="p">{</span>
+		<span class="k">if</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">15</span><span class="p">{</span>
+			<span class="k">break</span> <span class="n">loopOne</span>
+		<span class="p">}</span>
+		<span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">10</span><span class="p">{</span>
+			<span class="k">break</span> <span class="n">loopTwo</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

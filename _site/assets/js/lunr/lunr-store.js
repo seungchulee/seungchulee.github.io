@@ -22,4 +22,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/swift/function-optional/",
         "teaser": null
+      },{
+        "title": "[Swift] 구조체, 클래스, 프로퍼티, 메서드",
+        "excerpt":"구조체 / 클래스 구조체 구조체 선언 struct 키워드 사용 struct 구조체 이름 { 프로퍼티와 메서드들 } struct customer { var name : String var weight : Double } // 예시 구조체 생성 및 초기화 // 구조체 생성 var customer_one : customer = customer(name : \"Stephen\", weight : 70.0) // 상수로도...","categories": ["swift"],
+        "tags": [],
+        "url": "http://localhost:4000/swift/struct-class-property-method/",
+        "teaser": null
       }]

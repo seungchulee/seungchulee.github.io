@@ -1,0 +1,204 @@
+I"�G<h2 id="swift란">swift란?</h2>
+<ul>
+  <li>swift는 처음에 safe, modern, powerful을 모토로 가져왔다.</li>
+  <li>지금은 safe, fast, expressive를 방향성으로 잡고 가는 중이다.
+    <ul>
+      <li>safe : 문법을 엄격하게 적용하여 개발자의 실수를 방지, 타입추론은 지원하긴 함.</li>
+      <li>fast : 예전 애플 관련 프로그래밍을 하려고 하면 Objective-C를 배워야 했다. 지금은 Swift를 만들면서 Objective-C에 버금가는 성능을 내려고 하는 중이다.</li>
+      <li>expressive : 그나마 최근에 나온 언어이기 때문에 현대적이고 세련된 문법과 여러 기능들을 지원을 해준다.</li>
+    </ul>
+  </li>
+  <li>swift는 함수형 프로그래밍이면서 프로토콜 지향 언어다. <del>(이 부분은 아직 공부가 덜 되었다)</del></li>
+</ul>
+
+<h2 id="swift에서-변수-상수를-선언하는-방법">swift에서 변수, 상수를 선언하는 방법</h2>
+<ul>
+  <li>
+    <h3 id="변수">변수</h3>
+  </li>
+</ul>
+
+<p>프로그래밍 언어를 배우면서 가장 기초이면서 많이들 쓰는 변수 선언 방법이다.</p>
+
+<p>지금 내가 아는 언어는 c, python, javascript 정도인데 내가 아는 변수 선언 방법과 많이 다르다.</p>
+
+<p>선언을 할 때는 var 를 쓰고 타입과 값을 할당해 준다.</p>
+
+<blockquote>
+  <p>var name : type = value 형식으로 되어있다.</p>
+</blockquote>
+
+<p>예를 들면 var exp : Int = 10 이런 식으로 쓰는 것이다.</p>
+
+<p><strong>type</strong>부분은 생략할 수는 있지만 (var exp = 10)</p>
+
+<p>이는 글 서두에도 나왔듯이 safe라는 특성을 갖는 swift에서는 되도록이면 안쓰는 것이 낫다고 한다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">var</span> <span class="nv">name</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="k">var</span> <span class="nv">age</span> <span class="p">:</span> <span class="kt">Int</span>  <span class="c1">// 나중에 할당 가능 (초기화)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="mi">99</span>  <span class="c1">// 같은 type이면 재할당도 가능하다</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">"HAHA"</span>  <span class="c1">// 오류가 남</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h3 id="상수">상수</h3>
+  </li>
+</ul>
+
+<p>C에서 const처럼 선언을 하는 것 처럼 swift에서도 상수를 선언하는 방식이 있다.</p>
+
+<p>let을 쓰는 방식인데 이는 위에 변수를 선언하는 것처럼 해주면 된다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">let</span> <span class="nv">pi</span> <span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">3.14</span>
+    <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.3</span>  <span class="c1">// 오류가 남</span>
+</code></pre></div></div>
+
+<p>프로그램 전체에서 변하지 않을 값을 상수로 해주는 것이 편하다.</p>
+
+<h2 id="데이터-타입">데이터 타입</h2>
+
+<ol>
+  <li><strong>정수형</strong>
+    <ul>
+      <li>swift에서는 Int와 UInt가 존재한다.</li>
+      <li>Int는 음수/양수/0, UInt는 양수/0의 정수이다.</li>
+      <li>Int에는 Int8, Int16, Int32, Int64가 있는데 그냥 Int로 쓰면 자신의 컴퓨터의 사양에 따라서 알아서 정해지게 된다. (UInt도 마찬가지)</li>
+      <li>직접 확인해보고 싶으면 <code class="language-plaintext highlighter-rouge">Int.max, Int.min</code>으로 확인이 가능하다.(UInt도 마찬가지)</li>
+      <li>이 타입에는 십진수 뿐만 아니라 2진수, 8진수, 16진수도 가능하다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">check</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mh">0xC12</span> <span class="c1">// 16진수</span>
+<span class="k">var</span> <span class="nv">check</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mb">0b11010</span> <span class="c1">// 2 진수</span>
+<span class="k">var</span> <span class="nv">check</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mo">0o23125</span> <span class="c1">// 8진수 </span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Bool</strong>
+    <ul>
+      <li>true, false의 값을 가진다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">var</span> <span class="nv">tf</span> <span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span>  <span class="c1">// false도 가능</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Float, Double</strong>
+    <ul>
+      <li>Float는 32bit 부동 소숫점</li>
+      <li>Double은 64Bit 부동 소숫점</li>
+      <li>정확성은 Double이 높다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">fl</span> <span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="k">var</span> <span class="nv">db</span> <span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">3.14</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Character</strong>
+    <ul>
+      <li>단 하나의 문자를 저장하기 위함</li>
+      <li>이모지도 표현할 수 있다
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">usFlag</span><span class="p">:</span> <span class="kt">Character</span> <span class="o">=</span> <span class="s">"</span><span class="se">\u{1F1FA}\u{1F1F8}</span><span class="s">"</span> <span class="c1">// 🇺🇸</span>
+<span class="k">var</span> <span class="nv">f_name</span> <span class="p">:</span> <span class="kt">Character</span> <span class="o">=</span> <span class="s">"A"</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>String</strong>
+    <ul>
+      <li>말 그대로 문자열을 표현하기 위한 타입이다.</li>
+      <li>Character를 여러개 모은게 String이다.</li>
+      <li>’+’연산이나 append연산을 통해서 문자열을 합칠수도 있다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">st</span> <span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"this is string 🙏"</span>
+<span class="k">var</span> <span class="nv">st</span> <span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span> <span class="c1">// 빈 문자열</span>
+<span class="k">var</span> <span class="nv">st</span> <span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">()</span> <span class="c1">// 빈 문자열</span>
+<span class="n">st</span> <span class="o">=</span> <span class="s">"A"</span> <span class="o">+</span> <span class="s">"BB"</span>  <span class="c1">// st = "ABB"</span>
+<span class="n">st</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"DD"</span><span class="p">)</span>  <span class="c1">// st = "ABBDD"</span>
+<span class="n">st</span> <span class="o">+=</span> <span class="s">"F"</span>  <span class="c1">// st = "ABBDDF"</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Any</strong>
+    <ul>
+      <li>무슨 데이터 타입이 들어올 지 모를 때 Any는 아무 데이터 타입을 담을 수 있다.</li>
+      <li>아무거나 할당해도 되지만 가능한 안쓰는 것이 낫다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">any</span> <span class="p">:</span> <span class="kt">Any</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">any</span> <span class="o">=</span> <span class="s">"string?"</span> <span class="c1">// 가능함</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Tuple</strong>
+    <ul>
+      <li>파이썬의 튜플처럼 동작을 한다.</li>
+      <li>여러가지 타입을 하나로 묶어서 사용할 수 있다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">data</span> <span class="p">:</span> <span class="p">(</span><span class="kt">String</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="s">"Data"</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="c1">// 데이터 접근 방법 : data.0 =&gt; "Data" // data.1 =&gt; 10</span>
+<span class="k">var</span> <span class="nv">today</span> <span class="p">:</span> <span class="p">(</span><span class="nv">day</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">month</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="s">"Fri"</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="c1">// 데이터 접근 방법 : today.month =&gt; 8</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Array</strong>
+    <ul>
+      <li>튜플과는 다르게 같은 데이터들을 담는 타입이다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">names</span> <span class="p">:</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span><span class="p">]()</span>  <span class="c1">// 빈 string array 선언</span>
+<span class="k">var</span> <span class="nv">data</span> <span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1">// 빈 int array 선언</span>
+<span class="k">var</span> <span class="nv">family</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Father"</span><span class="p">,</span> <span class="s">"Mother"</span><span class="p">,</span> <span class="s">"Me"</span><span class="p">,</span> <span class="s">"Brother"</span><span class="p">]</span>
+<span class="k">var</span> <span class="nv">ages</span> <span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="n">int</span><span class="o">&gt;</span><span class="p">()</span> <span class="c1">// 빈 int array 선언</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Dictionary</strong>
+    <ul>
+      <li>key, value가 쌍으로 이루어진 타입이다.</li>
+      <li>key는 유일하다.</li>
+      <li>var를 사용해야 딕셔너리 수정이 가능하다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">mydictionary</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="kt">Dictionary</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span> <span class="kt">Int</span><span class="o">&gt;</span><span class="p">()</span> <span class="c1">// 빈 딕셔너리 선언 (key : string, value : int)</span>
+<span class="k">var</span> <span class="nv">mydictionary</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">]()</span>  <span class="c1">// 빈 딕셔너리 선언</span>
+<span class="k">var</span> <span class="nv">mydictionary</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:]</span>  <span class="c1">// 빈 딕셔너리 선언</span>
+<span class="n">mydictionary</span><span class="p">[</span><span class="s">"my_key"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">99</span>  <span class="c1">// key my_key에 해당하는 value는 99</span>
+<span class="n">mydictionary</span><span class="p">[</span><span class="s">"your_key"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> 
+<span class="nf">print</span><span class="p">(</span><span class="n">mydictionary</span><span class="p">[</span><span class="s">"key"</span><span class="p">,</span> <span class="k">default</span><span class="p">:</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1">// 0이 반환 됨</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Set</strong>
+    <ul>
+      <li>python의 set처럼 동일한 데이터의 저장은 안된다.</li>
+      <li>차집합, 교집합, 합집합 같은 set간 연산도 할 수 있다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">myset</span> <span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="o">=</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">()</span>  <span class="c1">// 빈 set 선언</span>
+<span class="k">var</span> <span class="nv">myset</span> <span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1">// 빈 set 선언</span>
+<span class="k">var</span> <span class="nv">myset</span> <span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">[</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">,</span> <span class="s">"D"</span><span class="p">,</span> <span class="s">"A"</span><span class="p">]</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">myset</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>  <span class="c1">// 4</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>열거형</strong>
+    <ul>
+      <li>연관된 항목들을 묶어서 포함하는 형태</li>
+      <li><strong>enum</strong>을 사용해서 데이터를 선언한다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">Month</span> <span class="p">:</span> <span class="kt">String</span><span class="p">{</span>
+  <span class="k">case</span> <span class="n">jan</span> <span class="o">=</span> <span class="s">"1월"</span>
+  <span class="k">case</span> <span class="n">feb</span> <span class="o">=</span> <span class="s">"2월"</span>
+  <span class="k">case</span> <span class="n">mar</span> <span class="o">=</span> <span class="s">"3월"</span>
+  <span class="k">case</span> <span class="n">apr</span> <span class="o">=</span> <span class="s">"4월"</span>
+  <span class="k">case</span> <span class="n">may</span> <span class="o">=</span> <span class="s">"5월"</span>
+  <span class="k">case</span> <span class="n">jun</span> <span class="o">=</span> <span class="s">"6월"</span>
+<span class="p">}</span>  <span class="c1">// String의 데이터를 가짐</span>
+<span class="nf">print</span><span class="p">(</span><span class="kt">Month</span><span class="o">.</span><span class="n">feb</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span>  <span class="c1">// "2월"</span>
+<span class="kd">enum</span> <span class="kt">Married</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">{</span>
+  <span class="k">case</span> <span class="n">married</span>  <span class="c1">// 0이 자동으로 mapping 됨</span>
+  <span class="k">case</span> <span class="n">no_married</span> <span class="c1">// 1이 자동으로 mapping 됨</span>
+  <span class="k">case</span> <span class="n">not_show</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="p">}</span>  <span class="c1">// Int의 데이터를 가짐</span>
+<span class="nf">print</span><span class="p">(</span><span class="kt">Married</span><span class="p">(</span><span class="nv">rawValue</span> <span class="p">:</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1">// no_married</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+:ET

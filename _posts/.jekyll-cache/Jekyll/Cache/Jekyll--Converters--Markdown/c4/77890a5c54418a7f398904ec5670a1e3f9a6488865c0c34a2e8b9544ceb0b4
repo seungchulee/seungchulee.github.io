@@ -1,0 +1,284 @@
+I"�]<h2 id="구조체--클래스">구조체 / 클래스</h2>
+<h3 id="구조체">구조체</h3>
+<ul>
+  <li>구조체 선언
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">struct</code> 키워드 사용
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="n">구조체</span> <span class="n">이름</span> <span class="p">{</span>
+ <span class="n">프로퍼티와</span> <span class="n">메서드들</span>
+<span class="p">}</span>
+<span class="kd">struct</span> <span class="n">customer</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">name</span> <span class="p">:</span> <span class="kt">String</span>
+  <span class="k">var</span> <span class="nv">weight</span> <span class="p">:</span> <span class="kt">Double</span>
+<span class="p">}</span> <span class="c1">// 예시</span>
+</code></pre></div>        </div>
+      </li>
+      <li>구조체 생성 및 초기화
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 구조체 생성</span>
+<span class="k">var</span> <span class="nv">customer_one</span> <span class="p">:</span> <span class="n">customer</span> <span class="o">=</span> <span class="nf">customer</span><span class="p">(</span><span class="nv">name</span> <span class="p">:</span> <span class="s">"Stephen"</span><span class="p">,</span> <span class="nv">weight</span> <span class="p">:</span> <span class="mf">70.0</span><span class="p">)</span> 
+<span class="c1">// 상수로도 생성 가능, 단, 내부 내용을 변경할 수는 없음</span>
+<span class="k">let</span> <span class="nv">customer_two</span> <span class="p">:</span> <span class="n">customer</span> <span class="o">=</span> <span class="nf">customer</span><span class="p">(</span><span class="nv">name</span> <span class="p">:</span> <span class="s">"Johndoe"</span><span class="p">,</span> <span class="nv">weight</span> <span class="p">:</span> <span class="mf">68.0</span><span class="p">)</span>  
+<span class="n">customer_one</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="mf">71.0</span>
+<span class="n">customer_two</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="mf">65.0</span> <span class="c1">// 변경 할 수 없음</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="클래스">클래스</h3>
+<ul>
+  <li>클래스 선언
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">class</code> 키워드 사용
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="n">클래스</span> <span class="n">이름</span> <span class="p">{</span>
+  <span class="n">프로퍼티와</span> <span class="n">메서드들</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="n">클래스</span> <span class="nv">이름</span> <span class="p">:</span> <span class="n">부모</span> <span class="n">클래스</span> <span class="n">이름</span><span class="p">{</span>
+  <span class="n">프로퍼티와</span> <span class="n">메서드들</span>
+<span class="p">}</span>  <span class="c1">// 부모 클래스를 상속받을 경우</span>
+<span class="kd">class</span> <span class="n">customer</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">name</span> <span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Stephen"</span>
+  <span class="k">var</span> <span class="nv">age</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">26</span>
+  <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"NoName"</span>
+  <span class="k">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="p">}</span>  <span class="c1">// 만약 처음 할당이 안되어 있으면 init()을 할당해준다.</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+      <li>클래스 생성 및 초기화
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">customer_one</span> <span class="p">:</span> <span class="n">customer</span> <span class="o">=</span> <span class="nf">customer</span><span class="p">()</span>  <span class="c1">// 클래스 생성</span>
+<span class="n">customer_one</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">27</span>
+<span class="k">let</span> <span class="nv">customer_two</span> <span class="p">:</span> <span class="n">customer</span> <span class="o">=</span> <span class="nf">customer</span><span class="p">()</span>
+<span class="n">customer_two</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Johndoe"</span>
+<span class="n">customer_two</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>  <span class="c1">// let이지만 내부 값을 변경할 수 있다.</span>
+</code></pre></div>        </div>
+      </li>
+      <li>클래스 소멸<br />
+  <code class="language-plaintext highlighter-rouge">deinit</code> 키워드 사용
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="n">customer</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">name</span> <span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
+  <span class="k">var</span> <span class="nv">age</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>  
+  <span class="kd">deinit</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"Class Terminated"</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">var</span> <span class="nv">customer_one</span> <span class="p">:</span> <span class="n">customer</span><span class="p">?</span> <span class="o">=</span> <span class="nf">customer</span><span class="p">()</span>
+<span class="n">customer_one</span> <span class="o">=</span> <span class="kc">nil</span>  <span class="c1">// deinit 코드가 수행이 된다.</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="구조체와-클래스-공통점">구조체와 클래스 공통점</h3>
+<ul>
+  <li>공통점
+    <ul>
+      <li>값을 저장하고 있는 컨테이너이다.</li>
+      <li>확장을 할 수 있다.</li>
+      <li>구조화된 데이터의 기능을 가진다.</li>
+      <li>서브 스크립트를 정의할 수 있다.</li>
+      <li>초기화를 정의할 수 있다.</li>
+      <li>등등</li>
+    </ul>
+  </li>
+  <li>차이점
+    <ul>
+      <li>클래스는 상속 가능하지만 구조체는 그렇지 못하다.</li>
+      <li>deinit은 클래스에서만 사용 가능하다.</li>
+      <li>타입 캐스팅은 클래스에서만 가능하다.</li>
+      <li>구조체는 값 타입이고 클래스는 참조 타입이다.</li>
+    </ul>
+  </li>
+  <li>구조체가 더 나을 경우
+    <ul>
+      <li>연관된 간단한 값의 집합을 캡슐화하는 것만이 목절일 경우</li>
+      <li>캡슐화한 값을 참조하는 것보다 복사하는 것이 나은 경우</li>
+      <li>구조체에 저장된 프로퍼티가 값 타입이고 참조하는 것 보다 복사하는 것이 나을 경우</li>
+      <li>다른 타입으로부터 상속 받거나 상속할 필요가 없을 경우</li>
+      <li>위 네가지 경우를 제외하면 클래스를 사용하는 것이 더 낫다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="프로퍼티-메서드">프로퍼티, 메서드</h2>
+<h3 id="프로퍼티">프로퍼티</h3>
+<p>프로퍼티는 구조체, 클래스, 열거형에 관련된 값이다.<br />
+저장 프로퍼티, 연산 프로퍼티, 타입 프로퍼티가 있다.</p>
+<ul>
+  <li>저장 프로퍼티
+    <ul>
+      <li>값을 저장하는 프로퍼티이다.</li>
+      <li>var, let이 사용된다</li>
+      <li>옵셔널도 사용이 가능하다.</li>
+      <li>옵셔널과는 조금 다르지만 <code class="language-plaintext highlighter-rouge">lazy</code> 키워드 쓸 수 있다.
+        <ul>
+          <li>호출이 있어야 값을 초기화한다.</li>
+          <li>불필요한 저장 공간이나 성능 저하를 방지할 수 있다.</li>
+          <li>주로 var 앞에 사용한다.
+            <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="n">customer</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">name</span> <span class="p">:</span> <span class="kt">String</span>  
+  <span class="k">var</span> <span class="nv">height</span> <span class="p">:</span> <span class="kt">Double</span> <span class="c1">// 저장 프로퍼티들이다.</span>
+  <span class="k">var</span> <span class="nv">age</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="c1">// 이름과 키는 필수지만 나이는 필수가 아니다.</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="n">person</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">height</span> <span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">170.0</span>
+  <span class="k">var</span> <span class="nv">age</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// 저장 프로퍼티들이다.</span>
+<span class="p">}</span>
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>연산 프로퍼티
+    <ul>
+      <li>값을 저장하는 프로퍼티가 아닌 특정 상태에 따른 연산을 하는 프로퍼티이다.</li>
+      <li>getter나 setter의 역할을 할 수 있다.</li>
+      <li>읽기 전용으로 get 메서드만 사용할 수 있다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="n">customer</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">age</span> <span class="p">:</span> <span class="kt">Int</span>
+  <span class="k">var</span> <span class="nv">height</span> <span class="p">:</span> <span class="kt">Double</span>
+  <span class="k">var</span> <span class="nv">weight</span> <span class="p">:</span> <span class="kt">Double</span>
+  <span class="k">var</span> <span class="nv">possible</span> <span class="p">:</span> <span class="n">customer</span> <span class="p">{</span>
+  <span class="c1">// 접근자</span>
+  <span class="k">get</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nf">customer</span><span class="p">(</span><span class="nv">age</span><span class="p">:</span> <span class="n">age</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">height</span> <span class="p">:</span> <span class="n">height</span> <span class="o">+</span> <span class="mf">1.5</span><span class="p">,</span> <span class="nv">weight</span> <span class="p">:</span> <span class="n">weight</span> <span class="o">+</span> <span class="mf">10.0</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="c1">// 설정자</span>
+  <span class="nf">set</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">age</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">age</span>
+      <span class="n">height</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">height</span>
+      <span class="n">weight</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">weight</span>
+  <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">var</span> <span class="nv">cus</span> <span class="p">:</span> <span class="n">customer</span> <span class="o">=</span> <span class="nf">customer</span><span class="p">(</span><span class="nv">age</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nv">height</span> <span class="p">:</span> <span class="mf">180.0</span><span class="p">,</span> <span class="nv">weight</span> <span class="p">:</span> <span class="mf">100.0</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">cus</span><span class="p">)</span>  <span class="c1">// 10, 180.0, 100.0</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">cus</span><span class="o">.</span><span class="n">possible</span><span class="p">)</span>  <span class="c1">// 11, 181.5, 110.0</span>
+<span class="n">cus</span><span class="o">.</span><span class="n">possible</span> <span class="o">=</span> <span class="nf">customer</span><span class="p">(</span><span class="nv">age</span> <span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="nv">height</span> <span class="p">:</span> <span class="mf">181.0</span><span class="p">,</span> <span class="nv">weight</span> <span class="p">:</span> <span class="mf">90.0</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">cus</span><span class="p">)</span>  <span class="c1">// 11, 181.0, 90.0</span>
+</code></pre></div>        </div>
+      </li>
+      <li>프로퍼티 감시자<br />
+  일반 저장 프로퍼티에서만 사용이 가능하다.
+        <ul>
+          <li>willSet
+            <ul>
+              <li>전달되는 인자는 프로퍼티가 변경될 값이다.</li>
+              <li>newValue가 자동 지정됨</li>
+            </ul>
+          </li>
+          <li>didSet
+            <ul>
+              <li>전달되는 인자는 변경되기 전의 값이다.</li>
+              <li>oldValue가 자동 지정됨.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>타입 프로퍼티
+    <ul>
+      <li>인스턴스가 아닌 타입 자체에 속하는 프로퍼티</li>
+      <li>인스턴스가 공통으로 사용하는(static, constant) 값이나 모든 인스턴스에서 공용으로 접근 가능하고 변경할 수 있는 변수(static) 등을 정의할 때 유용함.</li>
+      <li>종류
+        <ul>
+          <li>저장 타입 프로퍼티 : 변수 / 상수 가능  // 초기값 설정해야함 // 지연 연산 됨</li>
+          <li>연산 타입 프로퍼티 : 변수만 가능
+            <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">S_class</span> <span class="p">{</span>
+  <span class="c1">// 타입 프로퍼티를 타입 상수로 사용 가능</span>
+  <span class="kd">static</span> <span class="k">let</span> <span class="nv">typeletproperty</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">10</span>
+  <span class="c1">// 저장 타입 프로퍼티</span>
+  <span class="kd">static</span> <span class="k">var</span> <span class="nv">typeproperty</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">var</span> <span class="nv">instanceproperty</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">{</span>
+  <span class="k">didSet</span> <span class="p">{</span>
+  <span class="kt">S_class</span><span class="o">.</span><span class="n">typeproperty</span> <span class="o">=</span> <span class="n">instanceproperty</span> <span class="o">+</span> <span class="mi">100</span>
+  <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="c1">// 연산 타입 프로퍼티</span>
+  <span class="kd">static</span> <span class="k">var</span> <span class="nv">typeComputedProperty</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
+  <span class="k">get</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">typeproperty</span>
+  <span class="p">}</span>
+  <span class="k">set</span> <span class="p">{</span>
+  <span class="n">typeproperty</span> <span class="o">=</span> <span class="n">newValue</span>
+  <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">S_class</span><span class="o">.</span><span class="n">typeproperty</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="k">let</span> <span class="nv">classInstance</span><span class="p">:</span> <span class="kt">S_class</span> <span class="o">=</span> <span class="kt">Aclass</span><span class="p">()</span>
+<span class="n">classInstance</span><span class="o">.</span><span class="n">instanceproperty</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="nf">print</span><span class="p">(</span><span class="kt">S_class</span><span class="o">.</span><span class="n">typeproperty</span><span class="p">)</span>  <span class="c1">// 200</span>
+<span class="nf">print</span><span class="p">(</span><span class="kt">S_class</span><span class="o">.</span><span class="n">typeComputedProperty</span><span class="p">)</span>  <span class="c1">// 200</span>
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="메서드">메서드</h3>
+<p>메서드는 특정 타입에 관련된 함수.</p>
+<ul>
+  <li>인스턴스 메서드
+    <ul>
+      <li>특정 타입의 인스턴스에 속한 함수</li>
+      <li>인스턴스 내부의 프로퍼티를 변경하거나 연산 결과를 반환하는 등 인스턴스와 관련된 기능 수행</li>
+      <li>만약 구조체나 열거형 내부에서 인스턴스 메서드를 만들고자 할 때는 mutating 키워드를 앞에 붙여서 수행해야 한다.
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="n">person</span><span class="p">{</span>
+  <span class="k">var</span> <span class="nv">age</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">26</span>
+  <span class="k">var</span> <span class="nv">name</span> <span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Stephen"</span>
+  <span class="k">var</span> <span class="nv">height</span> <span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">176.0</span>
+  <span class="kd">func</span> <span class="nf">ageUp</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">{</span>  <span class="c1">// 인스턴스 메서드</span>
+  <span class="k">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span> <span class="o">+</span> <span class="n">amount</span>
+  <span class="p">}</span>
+  <span class="kd">func</span> <span class="nf">ageDown</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">{</span>  <span class="c1">// 인스턴스 메서드</span>
+  <span class="k">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span> <span class="o">-</span> <span class="n">amount</span>
+  <span class="p">}</span>
+  <span class="kd">func</span> <span class="nf">sayName</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">{</span>  <span class="c1">// 인스턴스 메서드</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"My name is </span><span class="se">\(</span><span class="k">self</span><span class="o">.</span><span class="n">name</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">var</span> <span class="nv">p1</span> <span class="p">:</span> <span class="n">person</span> <span class="o">=</span> <span class="nf">person</span><span class="p">()</span>
+<span class="n">p1</span><span class="o">.</span><span class="nf">ageUp</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span><span class="mi">5</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>  <span class="c1">// 31</span>
+<span class="n">p1</span><span class="o">.</span><span class="nf">ageDown</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span><span class="mi">3</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>  <span class="c1">// 28</span>
+<span class="n">p1</span><span class="o">.</span><span class="nf">sayName</span><span class="p">()</span>  <span class="c1">// My name is Stephen</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>타입 메서드
+    <ul>
+      <li>타입 자체에 호출이 가능한 메서드</li>
+      <li>메서드 앞에 <code class="language-plaintext highlighter-rouge">static</code> 키워드를 사용해 타입 메서드임을 알려줌</li>
+      <li><code class="language-plaintext highlighter-rouge">static</code> 으로 정의하면 상속 후 메서드 overriding 불가.  class로 정의하면 상속 후 메서드 재정의 가능
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">A</span><span class="p">{</span>
+  <span class="kd">static</span> <span class="kd">func</span> <span class="nf">staticsayName</span><span class="p">(){</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"A static"</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="kd">class</span> <span class="kd">func</span> <span class="nf">classsayName</span><span class="p">(){</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"A class"</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="kt">B</span><span class="p">:</span><span class="kt">A</span><span class="p">{</span>
+  <span class="cm">/*override static func staticsayName(){
+  오류가 남
+  override 불가능함
+  }*/</span>
+  <span class="k">override</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">classsayName</span><span class="p">(){</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"B class"</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+:ET
