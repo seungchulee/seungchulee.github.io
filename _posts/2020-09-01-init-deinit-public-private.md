@@ -38,7 +38,7 @@ enum C{
 }
 
 ```
-- #### 기본적인 initialize
+- #### 기본적인 initialize  
 	- `init()`을 작성하게 되면 인스턴스가 생성이 될 때 동작을 하여 초기화를 진행해준다.  
 ```swift
 class Person {
@@ -55,9 +55,10 @@ class Person2 {
 }
 var p1 : Person = Person()
 print(p1.age, p1.name) // -1, Johndoe
-```
+```    
+
 - #### init with 매개변수  
-		- `init()`에도 매개변수가 있을 수 있다.  
+	- `init` 에도 매개변수가 있을 수 있다.    
 ```swift
 class Person {
     var circle : Double
@@ -83,7 +84,9 @@ print(pr_3.circle) // 10.0
 var pr_4 : Person = Person(15.0)
 print(pr_4.circle) // 15.0
 var pr_5 : Person = Person()  // init() 함수가 없으므로 오류
-```
+```  
+
+
 - #### 옵셔널 초기화  
 	- 초기화 할 때 값을 바로 초기화하기 어려운 경우나 값이 안주어질 수 있는 경우 옵셔널을 통해서 나중에 값을 할당할 수 있다.  
 ```swift
