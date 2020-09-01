@@ -28,4 +28,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/swift/struct-class-property-method/",
         "teaser": null
+      },{
+        "title": "[Swift] 인스턴스 생성/소멸, 접근 제어",
+        "excerpt":"인스턴스 생성 / 소멸 인스턴스 생성 클래스, 구조체, 열거형 등에서 ìnit() 키워드를 이용해 initialize 할 수 있다. 따로 반환값은 없다 (단순히 초기화를 위함) class A { /* some code */ init(){ // initialize } } struct B { /* some code */ init() { // initialize } } enum C{...","categories": ["swift"],
+        "tags": [],
+        "url": "http://localhost:4000/swift/init-deinit-public-private/",
+        "teaser": null
       }]
