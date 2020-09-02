@@ -34,4 +34,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/swift/init-deinit-public-private/",
         "teaser": null
+      },{
+        "title": "[Swift] 클로저",
+        "excerpt":"클로저 함수 또한 클로저의 한 형태로 클로저는 일정 기능을 하는 코드를 하나의 블록으로 모아놓은 것이다. 이름은 존재하지 않을 수 있지만 파라미터를 받을 수 있고 반환값도 존재할 수 있다. 이러한 swift는 다양한 형태로도 쓸 수 있고 https://fuckingclosuresyntax.com/ 에 다양한 방식의 closure가 존재한다. 클로저 특징 매개변수와 반환 값의 타입을 문맥을 통해 유추할...","categories": ["swift"],
+        "tags": [],
+        "url": "http://localhost:4000/swift/closure/",
+        "teaser": null
       }]
