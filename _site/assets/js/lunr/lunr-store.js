@@ -40,4 +40,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/swift/closure/",
         "teaser": null
+      },{
+        "title": "[Swift] 옵셔널 체이닝, 빠른 종료",
+        "excerpt":"옵셔널 체이닝 옵셔널을 반복 사용해서 서로 얽혀있는 옵셔널 중 하나라도 값이 존재하지 않으면 nil을 반환하게 하는 방식이다. let p_one : Person = Person(name:\"Stephen\") if let roomNumber: Int = p_one.address?.building?.room?.number{ // optional chaining 방식 print(roomNumber) } else{ print(\"No Room\") } 위의 코드에서 if 안에 구문을 보면 옵셔널 바인딩을 이용해서 접근을 하고...","categories": ["swift"],
+        "tags": [],
+        "url": "http://localhost:4000/swift/optional-chaining-early-exit/",
+        "teaser": null
       }]
