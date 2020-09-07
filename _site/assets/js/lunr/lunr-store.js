@@ -46,4 +46,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/swift/optional-chaining-early-exit/",
         "teaser": null
+      },{
+        "title": "[Swift] Map, Filter, Reduce",
+        "excerpt":"스위프트에서는 함수를 일급 객체로 취급을 하기 때문에 함수를 다른 함수의 인자로 전달할 수 있다. 매개변수로 함수가 전달이 되는 것을 고차함수라고 하는데 대표적으로 맵, 필터, 리듀스가 있다. 맵 (Map) 맵은 자신을 호출할 때 매개변수로 전달된 함수를 실행하여 그 결과를 다시 반환해주는 함수이다. 배열, 딕셔너리, 세트, 옵셔널 등에서 사용이 가능하다. 기존 데이터는...","categories": ["swift"],
+        "tags": [],
+        "url": "http://localhost:4000/swift/map-filter-reduce/",
+        "teaser": null
       }]
