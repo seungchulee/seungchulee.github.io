@@ -52,4 +52,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/swift/map-filter-reduce/",
         "teaser": null
+      },{
+        "title": "[Swift] Monad",
+        "excerpt":"모나드 프로그래밍 관점에서 모나드가 갖춰야하는 조건에는 다음과 같다. 타입을 인자로 받는 타입(특정 타입의 값을 포장) 특정 타입의 값을 포장한 것을 반환하는 함수(메서드)가 존재 포장된 값을 반환하여 같은 형태로 포장하는 함수(메서드)가 존재 이 조건을 처음에 봤을 때 아직은 무슨 말인지 정확히 이해가 가지는 않았다. 그래서 모나드에 접근하기 위해서 필요한 여러 개념을...","categories": ["swift"],
+        "tags": [],
+        "url": "http://localhost:4000/swift/monad/",
+        "teaser": null
       }]
