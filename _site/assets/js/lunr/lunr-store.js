@@ -58,4 +58,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/swift/monad/",
         "teaser": null
+      },{
+        "title": "[Swift] Subscript, 상속-1",
+        "excerpt":"서브 스크립트 서브 스크립트는 클래스, 구조체, 열거형 타입의 요소에 접근하는 단축 문법이다. 그래서 서브 스크립트는 별도로 구현을 하지 않아도 인덱스를 통해 데이터에 접근을 할 수 있다. Array에 접근할 때는 array[idx]처럼 사용하고 딕셔너리에 접근할 때는 dict[idx]처럼 사용할 수 있다. 서브 스크립트를 여러개 정의할 수 있고 override도 가능하다. 구현 기본 틀은 아래와...","categories": ["swift"],
+        "tags": [],
+        "url": "http://localhost:4000/swift/subscript-hierarchy-1/",
+        "teaser": null
       }]
