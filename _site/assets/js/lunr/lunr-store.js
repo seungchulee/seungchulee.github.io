@@ -64,4 +64,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/swift/subscript-hierarchy-1/",
         "teaser": null
+      },{
+        "title": "[Swift] 상속-2",
+        "excerpt":"클래스 이니셜라이저 지정 이니셜라이저, 편의 이니셜라이저 지정 이니셜라이저는 클래스의 주요 이니셜라이저이다. 자식 클래스에서 필요하면 부모 클래스의 이니셜라이저를 호출할 수도 있다. 편의 이니셜라이저는 지정 이니셜라이저를 자기 자신 내부에서 호출을 한다. 편의 이니셜라이저는 필수 요수는 아니다. init( 매개변수들 ){ // 초기화 } // 지정 이니셜라이저 convenience init (매개 변수들){ // 초기화 }...","categories": ["swift"],
+        "tags": [],
+        "url": "http://localhost:4000/swift/hierarchy-2/",
+        "teaser": null
       }]
