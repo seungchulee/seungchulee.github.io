@@ -70,4 +70,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/swift/hierarchy-2/",
         "teaser": null
+      },{
+        "title": "[Swift] Protocol - 1",
+        "excerpt":"프로토콜 스위프트의 특징 중 하나는 프로토콜 지향 프로그래밍이다. 프로토콜이란? 프로토콜은 특정 역할을 하기 위한 메서드, 프로퍼티, 기타 요구사항 등을 정의한다. 그래서 프로토콜은 정의와 제시를 하기만 하고 그 기능을 구현하지는 않는다. 프로토콜을 따르는 데이터 타입에서 이 기능들을 구현해야 한다. 프로토콜 채택 protocol 프로토콜 이름 { // 프로토콜이 필요한 것들 정의만 }...","categories": ["swift"],
+        "tags": [],
+        "url": "http://localhost:4000/swift/protocol-1/",
+        "teaser": null
       }]
