@@ -76,4 +76,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/swift/protocol-1/",
         "teaser": null
+      },{
+        "title": "[Swift] protocol - 2",
+        "excerpt":"프로토콜 상속 / 클래스 전용 프로토콜 프로토콜 끼리 상속을 할 수 있으며 상속을 할 때는 상속 관계에 있는 프로토콜의 요구사항을 다 구현해야한다. protocol Aprotocol{ func A() } protocol Bprotocol{ func B() } protocol Cprotocol : Aprotocol, Bprotocol{ func C() // protocol 끼리 상속이 가능하다. } class AClass : Cprotocol{ func...","categories": ["swift"],
+        "tags": [],
+        "url": "http://localhost:4000/swift/protocol-2/",
+        "teaser": null
       }]
