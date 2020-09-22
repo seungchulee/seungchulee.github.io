@@ -82,4 +82,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/swift/protocol-2/",
         "teaser": null
+      },{
+        "title": "[Swift] 익스텐션",
+        "excerpt":"익스텐션 구조체, 클래스, 열거형, 프로토콜에 새로운 기능을 추가할 수 있는 강력한 기능이다. 타입에 새로운 기능을 추가할 수 있지만 기존에 있는 기능을 재정의하는 것은 불가능하다. 문법 extension 확장할 타입 이름{ // 구현 } extension 확장할 타입 : 프로토콜A, 프로토콜B { // 구현 } 위에 있는 형식으로 extension키워드를 사용해서 구현을 하고 아래의...","categories": ["swift"],
+        "tags": [],
+        "url": "http://localhost:4000/swift/extension/",
+        "teaser": null
       }]
