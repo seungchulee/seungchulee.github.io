@@ -88,4 +88,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/swift/extension/",
         "teaser": null
+      },{
+        "title": "[Swift] 제네릭",
+        "excerpt":"제네릭은 타입의 제한을 안두고 어떠한 함수나 타입을 선언한다는 것이다. 제네릭을 사용하면 어떤 함수에서 어떤 타입이 오는지 몰라도 그 함수를 사용할 수 있도록 하게 된다. [제네릭을 사용하는 타입 이름] &lt;타입 매개변수&gt; [제네릭을 사용하는 함수 이름] &lt;타입 매개변수&gt; (함수 매개변수 ... ) // 타입 매개변수로는 T가 주로 쓰인다. // 각 단어의 첫...","categories": ["swift"],
+        "tags": [],
+        "url": "http://localhost:4000/swift/generic/",
+        "teaser": null
       }]
